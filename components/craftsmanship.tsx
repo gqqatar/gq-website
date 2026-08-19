@@ -46,7 +46,7 @@ export function Craftsmanship() {
             <div>
               <dt className="text-sm font-medium text-ink-muted">Business lines</dt>
               <dd className="mt-1 font-display text-3xl font-medium text-navy">
-                UPVC &middot; Aluminium &middot; Trading
+                UPVC &middot; Aluminium &middot; Windows &amp; Doors Material Trading
               </dd>
             </div>
           </dl>

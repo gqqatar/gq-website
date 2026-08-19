@@ -23,7 +23,7 @@ export function Footer() {
             />
             <p className="mt-4 max-w-xs text-sm text-white/50">
               German Quality for Windows &amp; Doors &mdash; UPVC, aluminium, and
-              raw material trading, serving Qatar since 2010.
+              Windows &amp; Doors Material Trading, serving Qatar since 2010.
             </p>
           </div>
 

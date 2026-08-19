@@ -2,7 +2,7 @@ const STATS = [
   { value: "QAR 67M+", label: "Delivered in signed projects" },
   { value: "5,000+", label: "Projects across Qatar" },
   { value: "15+", label: "Years of German-standard installs" },
-  { value: "3", label: "Product lines — UPVC, Aluminium, Trading" },
+  { value: "3", label: "Business lines — UPVC, Aluminium & Material Trading" },
 ];
 
 export function Stats() {
