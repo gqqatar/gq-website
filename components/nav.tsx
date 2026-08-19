@@ -22,8 +22,8 @@ export function Nav() {
             priority
             className="h-8 w-auto md:h-9"
           />
-          <span className="hidden font-display text-lg font-semibold tracking-tight text-white sm:block">
-            German Quality
+          <span className="hidden font-display text-base font-semibold tracking-tight text-white md:block md:text-lg">
+            German Quality for Windows &amp; Doors
           </span>
         </Link>
 
