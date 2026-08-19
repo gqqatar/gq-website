@@ -50,7 +50,7 @@ export function Footer() {
                 </li>
                 <li>
                   <a
-                    href="https://erp.gqqatar.com/login"
+                    href="https://gq-erp.vercel.app/login"
                     className="inline-flex items-center gap-1.5 text-sm text-white/70 transition hover:text-white"
                   >
                     <IconLock className="h-3.5 w-3.5" />

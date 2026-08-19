@@ -30,7 +30,7 @@ export function Contact() {
                 className="inline-flex items-center gap-2 rounded-full border border-navy/20 px-6 py-3.5 text-sm font-semibold text-navy transition hover:border-navy hover:bg-navy hover:text-white"
               >
                 <IconPhone className="h-4 w-4" />
-                Call the office
+                Contact the Team
               </a>
             </div>
           </div>
@@ -50,20 +50,33 @@ export function Contact() {
                 <div className="mt-1 font-display text-lg text-navy">+974 5501 1175</div>
               </div>
             </a>
-            <a href="mailto:info@gq-upvc.com" className="flex flex-col gap-3 bg-surface p-7 transition hover:bg-white sm:col-span-2">
+            <a href="tel:+97439988998" className="flex flex-col gap-3 bg-surface p-7 transition hover:bg-white">
+              <IconPhone className="h-6 w-6 text-accent-deep" />
+              <div>
+                <div className="text-xs font-medium uppercase tracking-wide text-ink-muted">Mobile</div>
+                <div className="mt-1 font-display text-lg text-navy">+974 3998 8998</div>
+              </div>
+            </a>
+            <a href="mailto:info@gqqatar.com" className="flex flex-col gap-3 bg-surface p-7 transition hover:bg-white">
               <IconMail className="h-6 w-6 text-accent-deep" />
               <div>
                 <div className="text-xs font-medium uppercase tracking-wide text-ink-muted">Email</div>
-                <div className="mt-1 font-display text-lg text-navy">info@gq-upvc.com</div>
+                <div className="mt-1 font-display text-lg text-navy">info@gqqatar.com</div>
               </div>
             </a>
-            <div className="flex flex-col gap-3 bg-surface p-7 sm:col-span-2">
+            <a
+              href="https://maps.app.goo.gl/Dd1qeus7n3MfEYyH7"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col gap-3 bg-surface p-7 transition hover:bg-white sm:col-span-2"
+            >
               <IconPin className="h-6 w-6 text-accent-deep" />
               <div>
                 <div className="text-xs font-medium uppercase tracking-wide text-ink-muted">Showroom</div>
                 <div className="mt-1 font-display text-lg text-navy">Salwa Road, Doha, Qatar</div>
+                <div className="mt-1 text-sm text-accent-deep">Get directions &rarr;</div>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </div>

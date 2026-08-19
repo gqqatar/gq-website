@@ -40,7 +40,7 @@ export function Nav() {
         </nav>
 
         <a
-          href="https://erp.gqqatar.com/login"
+          href="https://gq-erp.vercel.app/login"
           className="group flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-white backdrop-blur-sm transition hover:border-accent hover:bg-accent hover:text-navy"
         >
           <IconLock className="h-3.5 w-3.5" />

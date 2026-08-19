@@ -4,7 +4,7 @@ const FEATURES = [
   {
     icon: IconInsulation,
     title: "Double-glazed insulation",
-    body: "Two panes with an insulating air gap keep interiors cooler in summer and warmer in winter, cutting the load on your AC.",
+    body: "Two panes with an insulating air gap keep interiors cooler in summer and warmer in winter, cutting the load on your AC — in both our UPVC and aluminium systems.",
   },
   {
     icon: IconSound,
@@ -19,7 +19,7 @@ const FEATURES = [
   {
     icon: IconMaintenance,
     title: "Decades of low upkeep",
-    body: "UPVC won't warp, rot, or corrode in Qatar's climate. No repainting, no rust — just a quick wipe-down.",
+    body: "Our UPVC and aluminium frames resist Qatar's heat without warping, corroding, or fading. No repainting, no rust — just a quick wipe-down.",
   },
 ];
 
@@ -28,15 +28,15 @@ export function WhyGQ() {
     <section id="why" className="mx-auto max-w-7xl px-6 py-28 md:px-10">
       <div className="max-w-2xl">
         <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent-deep">
-          Why UPVC, why GQ
+          Why GQ
         </p>
         <h2 className="mt-4 font-display text-4xl font-medium text-navy md:text-5xl">
           Built for a climate that punishes everything else.
         </h2>
         <p className="mt-5 text-lg text-ink-muted">
-          Over 15 years supplying premium German and Turkish profiles to Qatar, we've
-          learned exactly what this climate does to ordinary materials &mdash; and
-          engineered around it.
+          Over 15 years supplying premium UPVC and aluminium systems to Qatar,
+          we've learned exactly what this climate does to ordinary materials
+          &mdash; and engineered around it.
         </p>
       </div>
 
