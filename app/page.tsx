@@ -3,6 +3,7 @@ import { Hero } from "@/components/hero";
 import { Stats } from "@/components/stats";
 import { WhyGQ } from "@/components/why-gq";
 import { Craftsmanship } from "@/components/craftsmanship";
+import { Factory } from "@/components/factory";
 import { Products } from "@/components/products";
 import { Partners } from "@/components/partners";
 import { Gallery } from "@/components/gallery";
@@ -17,6 +18,7 @@ export default function Home() {
       <Stats />
       <WhyGQ />
       <Craftsmanship />
+      <Factory />
       <Products />
       <Partners />
       <Gallery />
