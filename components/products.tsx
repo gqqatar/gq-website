@@ -1,15 +1,47 @@
 import Image from "next/image";
 
-const CATEGORIES = [
-  "Doors — panel, French, lift & slide, folding",
-  "Curtain wall systems",
-  "Fly screens — pull-down & zig-zag",
-  "Skylights",
-  "Pivot doors",
-  "Steel doors",
-  "Garage doors",
-  "Aluminium doors",
-  "Glass & steel handrails",
+type Category = {
+  title: string;
+  subtitle?: string;
+  image?: string;
+  alt?: string;
+};
+
+const CATEGORIES: Category[] = [
+  {
+    title: "Doors",
+    subtitle: "Panel, French, lift & slide, folding",
+    image: "/images/door-entrance.png",
+    alt: "Grand villa entrance door installed by German Quality",
+  },
+  {
+    title: "Curtain Wall",
+    subtitle: "Full-height glazed systems",
+    image: "/images/curtain-wall.png",
+    alt: "Curtain wall glazing installed by German Quality",
+  },
+  {
+    title: "Fly Screens",
+    subtitle: "Zig-zag & pull-down",
+    image: "/images/zigzag-screen.png",
+    alt: "Zig-zag insect screen installed by German Quality",
+  },
+  {
+    title: "Pivot Doors",
+    subtitle: "Wide, statement entrances",
+    image: "/images/hero-entrance.png",
+    alt: "Pivot door installed at a Qatari villa entrance",
+  },
+  {
+    title: "Aluminium Doors",
+    subtitle: "Qalex aluminium systems",
+    image: "/images/aluminum-door.png",
+    alt: "Aluminium door and window installation by German Quality",
+  },
+  { title: "Skylights" },
+  { title: "Steel Doors" },
+  { title: "Garage Doors" },
+  { title: "Glass & Steel Handrails" },
 ];
 
 export function Products() {
@@ -45,20 +77,34 @@ export function Products() {
           </div>
         </div>
 
-        {CATEGORIES.map((c) => {
-          const [title, ...rest] = c.split(" — ");
-          return (
+        {CATEGORIES.map((c) =>
+          c.image ? (
+            <div key={c.title} className="group relative overflow-hidden rounded-2xl">
+              <div className="relative aspect-[4/3] w-full">
+                <Image
+                  src={c.image}
+                  alt={c.alt ?? c.title}
+                  fill
+                  sizes="(min-width: 1024px) 30vw, 90vw"
+                  className="object-cover object-top transition duration-700 group-hover:scale-105"
+                />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-navy/85 via-navy/5 to-transparent" />
+              <div className="absolute inset-x-0 bottom-0 p-6">
+                <h3 className="font-display text-xl font-medium text-white">{c.title}</h3>
+                {c.subtitle && <p className="mt-1 text-sm text-white/75">{c.subtitle}</p>}
+              </div>
+            </div>
+          ) : (
             <div
-              key={c}
+              key={c.title}
               className="rounded-2xl border border-line bg-surface p-6 transition hover:border-accent-deep hover:shadow-md"
             >
-              <h3 className="font-display text-lg font-medium text-navy">{title}</h3>
-              {rest.length > 0 && (
-                <p className="mt-1.5 text-sm text-ink-muted">{rest.join(" — ")}</p>
-              )}
+              <h3 className="font-display text-lg font-medium text-navy">{c.title}</h3>
+              {c.subtitle && <p className="mt-1.5 text-sm text-ink-muted">{c.subtitle}</p>}
             </div>
-          );
-        })}
+          ),
+        )}
       </div>
     </section>
   );
