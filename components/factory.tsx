@@ -38,7 +38,7 @@ export function Factory() {
             loop
             playsInline
             preload="none"
-            className="h-full w-full scale-90 object-contain opacity-60"
+            className="h-full w-full object-cover opacity-60"
           >
             <source src="/videos/factory.mp4" type="video/mp4" />
           </video>
