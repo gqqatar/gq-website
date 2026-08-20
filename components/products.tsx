@@ -38,10 +38,27 @@ const CATEGORIES: Category[] = [
     image: "/images/aluminum-door.png",
     alt: "Aluminium door and window installation by German Quality",
   },
-  { title: "Skylights" },
-  { title: "Steel Doors" },
-  { title: "Garage Doors" },
-  { title: "Glass & Steel Handrails" },
+  {
+    title: "Skylights",
+    image: "/images/skylight.png",
+    alt: "Skylight installation viewed from below",
+  },
+  {
+    title: "Steel Doors",
+    image: "/images/steel-door.avif",
+    alt: "Ornate laser-cut steel door",
+  },
+  {
+    title: "Garage Doors",
+    subtitle: "Ornate laser-cut steel",
+    image: "/images/garage-door.webp",
+    alt: "Ornate laser-cut steel garage gate",
+  },
+  {
+    title: "Glass & Steel Handrails",
+    image: "/images/glass-handrail.jpg",
+    alt: "Glass and steel staircase handrail",
+  },
 ];
 
 export function Products() {
@@ -60,8 +77,8 @@ export function Products() {
         <div className="group relative col-span-1 overflow-hidden rounded-2xl sm:col-span-2 lg:col-span-3">
           <div className="relative aspect-[16/9] w-full">
             <Image
-              src="/images/arch-window.png"
-              alt="Arched UPVC and aluminium window installed by German Quality"
+              src="/images/windows-featured.png"
+              alt="UPVC and aluminium window installed by German Quality"
               fill
               sizes="90vw"
               className="object-cover transition duration-700 group-hover:scale-105"
@@ -80,13 +97,13 @@ export function Products() {
         {CATEGORIES.map((c) =>
           c.image ? (
             <div key={c.title} className="group relative overflow-hidden rounded-2xl">
-              <div className="relative aspect-[4/3] w-full">
+              <div className="relative aspect-[3/4] w-full">
                 <Image
                   src={c.image}
                   alt={c.alt ?? c.title}
                   fill
                   sizes="(min-width: 1024px) 30vw, 90vw"
-                  className="object-cover object-top transition duration-700 group-hover:scale-105"
+                  className="object-cover object-bottom transition duration-700 group-hover:scale-105"
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-navy/85 via-navy/5 to-transparent" />

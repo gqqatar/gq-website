@@ -5,7 +5,6 @@ import { useEffect, useRef, useState } from "react";
 export function Factory() {
   const sectionRef = useRef<HTMLElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [muted, setMuted] = useState(true);
   const [shouldLoad, setShouldLoad] = useState(false);
 
   useEffect(() => {
@@ -35,11 +34,11 @@ export function Factory() {
           <video
             ref={videoRef}
             autoPlay
-            muted={muted}
+            muted
             loop
             playsInline
             preload="none"
-            className="h-full w-full object-cover opacity-60"
+            className="h-full w-full scale-90 object-contain opacity-60"
           >
             <source src="/videos/factory.mp4" type="video/mp4" />
           </video>
@@ -59,14 +58,6 @@ export function Factory() {
           Every frame is cut, welded, and quality-checked in-house before it ever
           reaches a site &mdash; precision that starts long before installation.
         </p>
-
-        <button
-          type="button"
-          onClick={() => setMuted((m) => !m)}
-          className="mt-8 inline-flex items-center gap-2 rounded-full border border-white/30 px-5 py-2.5 text-sm font-semibold text-white transition hover:border-white hover:bg-white/10"
-        >
-          {muted ? "Unmute" : "Mute"}
-        </button>
       </div>
     </section>
   );

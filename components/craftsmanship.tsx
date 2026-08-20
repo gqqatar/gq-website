@@ -14,15 +14,6 @@ export function Craftsmanship() {
               className="object-cover"
             />
           </div>
-          <div className="absolute -bottom-8 -right-6 hidden aspect-[4/3] w-56 overflow-hidden rounded-xl border-4 border-bg-alt shadow-xl sm:block">
-            <Image
-              src="/images/showroom-window.png"
-              alt="German Quality showroom window display"
-              fill
-              sizes="14rem"
-              className="object-cover"
-            />
-          </div>
         </div>
 
         <div className="lg:pl-6">
@@ -45,8 +36,16 @@ export function Craftsmanship() {
             </div>
             <div>
               <dt className="text-sm font-medium text-ink-muted">Business lines</dt>
-              <dd className="mt-1 font-display text-3xl font-medium text-navy">
-                UPVC &middot; Aluminium &middot; Windows &amp; Doors Material Trading
+              <dd className="mt-2 space-y-1">
+                <p className="font-display text-lg font-medium leading-tight text-navy">
+                  German UPVC Windows and Doors
+                </p>
+                <p className="font-display text-lg font-medium leading-tight text-navy">
+                  Aluminum Windows and Doors
+                </p>
+                <p className="font-display text-lg font-medium leading-tight text-navy">
+                  GQ Material Trading
+                </p>
               </dd>
             </div>
           </dl>
