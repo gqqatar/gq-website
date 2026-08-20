@@ -1,18 +1,13 @@
-import Image from "next/image";
 import { IconArrow, IconInstagram } from "./icons";
+import { InstagramEmbed } from "./instagram-embed";
 
-const INSTAGRAM_URL = "https://instagram.com/GQ_UPVC";
-
-const PHOTOS = [
-  { src: "/images/villa-alwakra.png", alt: "Villa windows installed in Al Wakra", tall: true },
-  { src: "/images/window-sunflare.png", alt: "UPVC window detail, Doha villa" },
-  { src: "/images/villa-entrance.png", alt: "Villa main entrance door and glazing" },
-  { src: "/images/hallway-windows.png", alt: "Row of UPVC windows, interior hallway", tall: true },
-  { src: "/images/mosque-view.png", alt: "Window installation overlooking a Doha mosque" },
-  { src: "/images/villa-facade.png", alt: "Villa facade with UPVC glazing" },
-  { src: "/images/tilted-window.png", alt: "UPVC window installation detail" },
-  { src: "/images/ceiling-window.png", alt: "Ceiling-height UPVC window installation", tall: true },
-  { src: "/images/product-smart-lock.png", alt: "German Quality smart lock detail" },
+const INSTAGRAM_URL = "https://instagram.com/gq_upvc";
+const REEL_URL = "https://www.instagram.com/gq_upvc/reel/DUXymiZDEiH/";
+const POST_URLS = [
+  "https://www.instagram.com/gq_upvc/p/DcQfmb9M7me/",
+  "https://www.instagram.com/gq_upvc/p/Db0StiosU_T/",
+  "https://www.instagram.com/gq_upvc/p/Db2slM5sTwr/",
+  "https://www.instagram.com/gq_upvc/p/DbxzKLwMFLy/",
 ];
 
 export function Gallery() {
@@ -23,7 +18,7 @@ export function Gallery() {
           <div className="max-w-xl">
             <p className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-accent">
               <IconInstagram className="h-4 w-4" />
-              @GQ_UPVC on Instagram
+              @gq_upvc on Instagram
             </p>
             <h2 className="mt-4 font-display text-4xl font-medium text-white md:text-5xl">
               Follow along as we build across Qatar.
@@ -46,27 +41,18 @@ export function Gallery() {
           </div>
         </div>
 
-        <div className="mt-14 grid grid-cols-2 gap-4 sm:grid-cols-4">
-          {PHOTOS.map((p) => (
-            <a
-              key={p.src}
-              href={INSTAGRAM_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`group relative block overflow-hidden rounded-xl ${p.tall ? "row-span-2 aspect-[3/4]" : "aspect-square"}`}
-            >
-              <Image
-                src={p.src}
-                alt={p.alt}
-                fill
-                sizes="(min-width: 640px) 25vw, 50vw"
-                className="object-cover object-top transition duration-700 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 flex items-center justify-center bg-navy/0 transition group-hover:bg-navy/50">
-                <IconInstagram className="h-7 w-7 text-white opacity-0 transition group-hover:opacity-100" />
+        <div className="mt-14 grid gap-8 lg:grid-cols-[420px_1fr] lg:items-start lg:gap-10">
+          <div className="rounded-2xl bg-white p-1.5 shadow-2xl shadow-black/30">
+            <InstagramEmbed url={REEL_URL} />
+          </div>
+
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+            {POST_URLS.map((url) => (
+              <div key={url} className="rounded-2xl bg-white p-1.5 shadow-xl shadow-black/20">
+                <InstagramEmbed url={url} />
               </div>
-            </a>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
