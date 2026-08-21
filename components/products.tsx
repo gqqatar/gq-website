@@ -11,6 +11,8 @@ const CATEGORIES: Category[] = [
   {
     title: "Doors",
     subtitle: "Panel, French, lift & slide, folding",
+    image: "/images/hero-entrance.png",
+    alt: "Glass door installed at a Qatari villa entrance",
   },
   {
     title: "Curtain Wall",
