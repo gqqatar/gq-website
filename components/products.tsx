@@ -25,14 +25,10 @@ const CATEGORIES: Category[] = [
   {
     title: "Pivot Doors",
     subtitle: "Wide, statement entrances",
-    image: "/images/hero-entrance.png",
-    alt: "Pivot door installed at a Qatari villa entrance",
   },
   {
     title: "Aluminium Doors",
     subtitle: "Qalex aluminium systems",
-    image: "/images/aluminum-door.png",
-    alt: "Aluminium door and window installation by German Quality",
   },
   {
     title: "Skylights",
