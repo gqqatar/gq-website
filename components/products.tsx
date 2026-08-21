@@ -23,6 +23,8 @@ const CATEGORIES: Category[] = [
   {
     title: "Fly Screens",
     subtitle: "Zig-zag & pull-down",
+    image: "/images/fly-screen.png",
+    alt: "Pleated fly screen installed on a window by German Quality",
   },
   {
     title: "Pivot Doors",

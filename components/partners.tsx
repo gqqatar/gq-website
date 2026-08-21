@@ -1,11 +1,12 @@
 import Image from "next/image";
 
 const LOGO_PARTNERS = [
-  { name: "Schüco", src: "/logos/schuco.svg", height: 28 },
-  { name: "Kömmerling", src: "/logos/kommerling.svg", height: 24 },
-  { name: "Roto", src: "/logos/roto.svg", height: 30 },
+  { name: "Schüco", src: "/logos/schuco.svg", height: 28, width: 112 },
+  { name: "Kömmerling", src: "/logos/kommerling.svg", height: 24, width: 96 },
+  { name: "Roto", src: "/logos/roto.svg", height: 30, width: 120 },
+  { name: "Firatpen", src: "/logos/firatpen.png", height: 36, width: 130 },
+  { name: "Qalex", src: "/logos/qalex.png", height: 48, width: 96 },
 ];
-const TEXT_PARTNERS = ["Firatpen", "Qalex"];
 
 export function Partners() {
   return (
@@ -20,7 +21,7 @@ export function Partners() {
 
         <div className="mt-10 flex flex-wrap items-center justify-center gap-x-12 gap-y-6">
           {LOGO_PARTNERS.map((p) => (
-            <div key={p.name} className="relative" style={{ height: p.height, width: p.height * 4 }}>
+            <div key={p.name} className="relative" style={{ height: p.height, width: p.width }}>
               <Image
                 src={p.src}
                 alt={`${p.name} logo`}
@@ -29,11 +30,6 @@ export function Partners() {
                 className="object-contain object-center"
               />
             </div>
-          ))}
-          {TEXT_PARTNERS.map((name) => (
-            <span key={name} className="font-display text-xl font-medium text-navy">
-              {name}
-            </span>
           ))}
         </div>
       </div>
