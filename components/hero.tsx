@@ -22,22 +22,22 @@ export function Hero() {
         href={MAPS_URL}
         target="_blank"
         rel="noopener noreferrer"
-        className="group absolute right-6 top-24 z-10 hidden w-64 overflow-hidden rounded-2xl border border-white/15 bg-navy/40 shadow-2xl shadow-black/30 backdrop-blur-sm transition hover:border-accent/60 md:block md:right-10 lg:top-28"
+        className="group absolute right-6 top-24 z-10 hidden w-[26rem] overflow-hidden rounded-2xl border border-white/15 bg-navy/40 shadow-2xl shadow-black/30 backdrop-blur-sm transition hover:border-accent/60 md:block md:right-10 lg:top-28"
       >
         <div className="relative aspect-[16/10] w-full">
           <Image
             src="/images/showroom-storefront.jpg"
             alt="German Quality showroom storefront on Salwa Road"
             fill
-            sizes="256px"
+            sizes="416px"
             className="object-cover transition duration-700 group-hover:scale-105"
           />
         </div>
-        <div className="flex items-center gap-2 px-4 py-3">
-          <IconPin className="h-4 w-4 shrink-0 text-accent" />
+        <div className="flex items-center gap-3 px-5 py-4">
+          <IconPin className="h-5 w-5 shrink-0 text-accent" />
           <div className="min-w-0">
-            <div className="text-xs font-semibold text-white">Our Showroom</div>
-            <div className="truncate text-[11px] text-white/60">Salwa Road &middot; Get directions</div>
+            <div className="text-sm font-semibold text-white">Our Showroom</div>
+            <div className="truncate text-xs text-white/60">Salwa Road &middot; Get directions</div>
           </div>
         </div>
       </a>
