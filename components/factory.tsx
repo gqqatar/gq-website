@@ -43,7 +43,7 @@ export function Factory() {
   }, [shouldLoad]);
 
   return (
-    <section ref={sectionRef} className="relative overflow-hidden bg-navy py-28">
+    <section ref={sectionRef} className="relative overflow-hidden bg-navy py-16">
       <div className="absolute inset-0">
         {shouldLoad && (
           <video
@@ -66,35 +66,35 @@ export function Factory() {
         <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent">
           Behind the Scenes
         </p>
-        <h2 className="mt-4 max-w-2xl font-display text-4xl font-medium text-white md:text-5xl">
+        <h2 className="mt-3 max-w-2xl font-display text-2xl font-medium text-white md:text-3xl">
           Inside the factory floor.
         </h2>
-        <p className="mt-5 max-w-lg text-lg text-white/70">
+        <p className="mt-3 max-w-lg text-sm text-white/70">
           Every frame is cut, welded, and quality-checked in-house before it ever
           reaches a site &mdash; precision that starts long before installation.
         </p>
 
-        <div className="mt-24">
+        <div className="mt-12">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent">
             Our People
           </p>
-          <h2 className="mt-4 max-w-2xl font-display text-4xl font-medium text-white md:text-5xl">
+          <h2 className="mt-3 max-w-2xl font-display text-2xl font-medium text-white md:text-3xl">
             Meet the team achieving your dreams.
           </h2>
-          <p className="mt-5 max-w-lg text-lg text-white/70">
+          <p className="mt-3 max-w-lg text-sm text-white/70">
             Every window and door that leaves our factory passes through the
             hands of this team &mdash; measured, cut, assembled, and checked
             before it ever reaches your site.
           </p>
 
-          <div className="mt-14 grid grid-cols-2 gap-5 sm:grid-cols-4">
+          <div className="mt-8 grid grid-cols-3 gap-3 sm:grid-cols-6">
             {TEAM.map((src) => (
-              <div key={src} className="relative aspect-square overflow-hidden rounded-2xl">
+              <div key={src} className="relative aspect-square overflow-hidden rounded-xl">
                 <Image
                   src={src}
                   alt="German Quality team member"
                   fill
-                  sizes="(min-width: 640px) 22vw, 45vw"
+                  sizes="(min-width: 640px) 12vw, 30vw"
                   className="object-cover object-top transition duration-700 hover:scale-105"
                 />
               </div>
