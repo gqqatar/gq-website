@@ -1,5 +1,7 @@
 import Image from "next/image";
-import { IconArrow, IconPhone } from "./icons";
+import { IconArrow, IconPhone, IconPin } from "./icons";
+
+const MAPS_URL = "https://maps.app.goo.gl/Dd1qeus7n3MfEYyH7";
 
 export function Hero() {
   return (
@@ -15,6 +17,30 @@ export function Hero() {
       <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/70 to-navy/20" />
       <div className="absolute inset-0 bg-gradient-to-r from-navy/70 via-navy/10 to-transparent" />
       <div className="blueprint-grid absolute inset-0 opacity-40" />
+
+      <a
+        href={MAPS_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group absolute right-6 top-24 z-10 hidden w-64 overflow-hidden rounded-2xl border border-white/15 bg-navy/40 shadow-2xl shadow-black/30 backdrop-blur-sm transition hover:border-accent/60 md:block md:right-10 lg:top-28"
+      >
+        <div className="relative aspect-[16/10] w-full">
+          <Image
+            src="/images/showroom-storefront.jpg"
+            alt="German Quality showroom storefront on Salwa Road"
+            fill
+            sizes="256px"
+            className="object-cover transition duration-700 group-hover:scale-105"
+          />
+        </div>
+        <div className="flex items-center gap-2 px-4 py-3">
+          <IconPin className="h-4 w-4 shrink-0 text-accent" />
+          <div className="min-w-0">
+            <div className="text-xs font-semibold text-white">Our Showroom</div>
+            <div className="truncate text-[11px] text-white/60">Salwa Road &middot; Get directions</div>
+          </div>
+        </div>
+      </a>
 
       <div className="relative z-10 mx-auto w-full max-w-7xl px-6 pb-20 pt-40 md:px-10 md:pb-28">
         <p className="animate-fade-up text-xs font-semibold uppercase tracking-[0.3em] text-accent">
