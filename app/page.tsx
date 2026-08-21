@@ -5,7 +5,6 @@ import { WhyGQ } from "@/components/why-gq";
 import { Craftsmanship } from "@/components/craftsmanship";
 import { NotableProjects } from "@/components/notable-projects";
 import { Factory } from "@/components/factory";
-import { Team } from "@/components/team";
 import { Products } from "@/components/products";
 import { Partners } from "@/components/partners";
 import { Clients } from "@/components/clients";
@@ -23,7 +22,6 @@ export default function Home() {
       <Craftsmanship />
       <NotableProjects />
       <Factory />
-      <Team />
       <Products />
       <Partners />
       <Clients />

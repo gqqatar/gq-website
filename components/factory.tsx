@@ -1,6 +1,21 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+
+const TEAM = [
+  "/images/team/member-1.jpg",
+  "/images/team/member-2.jpg",
+  "/images/team/member-3.jpg",
+  "/images/team/member-4.jpg",
+  "/images/team/member-5-sahil.jpg",
+  "/images/team/member-6.jpg",
+  "/images/team/member-7.jpg",
+  "/images/team/member-8-bigan.jpg",
+  "/images/team/member-9.jpg",
+  "/images/team/member-10.jpg",
+  "/images/team/member-11.jpg",
+];
 
 export function Factory() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -58,6 +73,34 @@ export function Factory() {
           Every frame is cut, welded, and quality-checked in-house before it ever
           reaches a site &mdash; precision that starts long before installation.
         </p>
+
+        <div className="mt-24">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent">
+            Our People
+          </p>
+          <h2 className="mt-4 max-w-2xl font-display text-4xl font-medium text-white md:text-5xl">
+            Meet the team achieving your dreams.
+          </h2>
+          <p className="mt-5 max-w-lg text-lg text-white/70">
+            Every window and door that leaves our factory passes through the
+            hands of this team &mdash; measured, cut, assembled, and checked
+            before it ever reaches your site.
+          </p>
+
+          <div className="mt-14 grid grid-cols-2 gap-5 sm:grid-cols-4">
+            {TEAM.map((src) => (
+              <div key={src} className="relative aspect-square overflow-hidden rounded-2xl">
+                <Image
+                  src={src}
+                  alt="German Quality team member"
+                  fill
+                  sizes="(min-width: 640px) 22vw, 45vw"
+                  className="object-cover object-top transition duration-700 hover:scale-105"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

@@ -1,8 +1,11 @@
-const PROFILE_PARTNERS = ["Kömmerling", "Firatpen", "Best PEN", "Deceuninck", "Adopen", "Enderpen", "Taurus"];
-const OTHER_PARTNERS = [
-  { name: "Roto", note: "Hardware" },
-  { name: "Qalex", note: "Aluminium" },
+import Image from "next/image";
+
+const LOGO_PARTNERS = [
+  { name: "Schüco", src: "/logos/schuco.svg", height: 28 },
+  { name: "Kömmerling", src: "/logos/kommerling.svg", height: 24 },
+  { name: "Roto", src: "/logos/roto.svg", height: 30 },
 ];
+const TEXT_PARTNERS = ["Firatpen", "Qalex"];
 
 export function Partners() {
   return (
@@ -15,24 +18,21 @@ export function Partners() {
           German and Turkish profile systems, genuine hardware.
         </h2>
 
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
-          {PROFILE_PARTNERS.map((name) => (
-            <span
-              key={name}
-              className="rounded-full border border-line bg-surface px-5 py-2.5 font-display text-base font-medium text-navy"
-            >
-              {name}
-            </span>
+        <div className="mt-10 flex flex-wrap items-center justify-center gap-x-12 gap-y-6">
+          {LOGO_PARTNERS.map((p) => (
+            <div key={p.name} className="relative" style={{ height: p.height, width: p.height * 4 }}>
+              <Image
+                src={p.src}
+                alt={`${p.name} logo`}
+                fill
+                sizes="160px"
+                className="object-contain object-center"
+              />
+            </div>
           ))}
-          {OTHER_PARTNERS.map((p) => (
-            <span
-              key={p.name}
-              className="flex items-center gap-2 rounded-full border border-accent-deep/30 bg-accent-soft px-5 py-2.5 font-display text-base font-medium text-accent-deep"
-            >
-              {p.name}
-              <span className="text-xs font-sans font-normal uppercase tracking-wide text-accent-deep/70">
-                {p.note}
-              </span>
+          {TEXT_PARTNERS.map((name) => (
+            <span key={name} className="font-display text-xl font-medium text-navy">
+              {name}
             </span>
           ))}
         </div>

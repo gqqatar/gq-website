@@ -11,8 +11,6 @@ const CATEGORIES: Category[] = [
   {
     title: "Doors",
     subtitle: "Panel, French, lift & slide, folding",
-    image: "/images/door-entrance.png",
-    alt: "Grand villa entrance door installed by German Quality",
   },
   {
     title: "Curtain Wall",
@@ -23,8 +21,6 @@ const CATEGORIES: Category[] = [
   {
     title: "Fly Screens",
     subtitle: "Zig-zag & pull-down",
-    image: "/images/zigzag-screen.png",
-    alt: "Zig-zag insect screen installed by German Quality",
   },
   {
     title: "Pivot Doors",
