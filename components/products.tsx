@@ -33,6 +33,8 @@ const CATEGORIES: Category[] = [
   {
     title: "Aluminium Doors",
     subtitle: "Qalex aluminium systems",
+    image: "/images/aluminum-door-2.png",
+    alt: "Aluminium door with geometric glass design installed by German Quality",
   },
   {
     title: "Skylights",
