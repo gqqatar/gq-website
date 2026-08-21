@@ -27,6 +27,8 @@ const CATEGORIES: Category[] = [
   {
     title: "Pivot Doors",
     subtitle: "Wide, statement entrances",
+    image: "/images/pivot-door.png",
+    alt: "Wooden pivot door installed at a Qatari villa entrance",
   },
   {
     title: "Aluminium Doors",
